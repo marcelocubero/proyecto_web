@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de Opacidad</title>   
+
+
+    <!-- Enlace a biblioteca JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+    <!-- Enlace a hoja CSS de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    
+    <!-- Enlace a biblioteca JavaScript de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>   
+
+    <!-- Enlace a complemento Leaflet-choropleth -->
+    <script src="js/choropleth.js"></script> 
+	
+	    <!-- Enlace a leaflet-providers -->  
+    <script src="js/leaflet-providers.js"></script>  
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+
+</head>
+<body>
+	<ul>
+		<li><a class="active" href="index.html">Proyecto General</a></li> 
+		<li><a href="index_1.html">Control de Opacidad</a></li> 
+		<li><a href="index_2.html">Coropleta</a></li>
+		<li><a href="index_3.html">Agrupados y Calor</a></li>
+	</ul>
+	<div class= 'row'>
+	
+				<h1>Control de Opacidad</h1>
+				<p>
+				<h2> Rango Diurno Medio </h2>
+		<div class='column'>
+				
+				<!-- Elemento div para contener el mapa Leaflet -->
+				<div id="mapid"></div>
+
+		</div>		<!-- Código JavaScript para generar y manejar el mapa Leaflet -->
+				<script src="js/scripts_1.js"></script>	
+				
+				
+		<div class='column'>		
+		 
+			<p>
+			<h3>Opacidad de la capa: </h3>
+			<p> 
+			<h4>Rango Diurno Medio (media mensual (temperatura máxima - temperatura mínima)): <span id="span-opacity_rdn">0.5</span></h4>
+			<input type='range' id='sld-opacity_rdn' min='0' max='1' step='0.1' value='0.5' onchange='updateOpacity_rdn();'>
+			
+		</div>		
+				
+	</div>
+	
+</body>
+</html>
